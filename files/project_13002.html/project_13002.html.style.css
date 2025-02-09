@@ -1,0 +1,27 @@
+*{
+    font-family: nunito;
+    font-size: 1.3rem;
+    color:#fafafa;
+}
+body{
+    background-color: #212121;
+    text-align: center;
+    align-items: center;
+}
+input.buttons {
+    font-size: 1.5rem;
+    color: #fafafa;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid #fafafa;
+    background: #252525;
+    box-shadow: 3px 3px #fafafa;
+    cursor: pointer;
+    margin: 35px 0;
+}
+  
+input.buttons:active {
+    box-shadow: none;
+    transform: translate(3px, 3px);
+}
