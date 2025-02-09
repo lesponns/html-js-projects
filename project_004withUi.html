@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function With Params</title>
+</head>
+<body>
+<script>
+    function moneyParam(type, amount) {
+        
+        if (type == "YTL") {
+            var rate = 1;
+        }
+        if (type == "USD") {
+            var rate = 35;
+        }
+        if (type == "EUR") {
+            var rate = 36;
+        }
+        var calc = amount*rate;
+        //return calc;
+        
+        document.getElementById("lastCalc").innerHTML = calc;
+    }/*
+    document.write("50 YTL : " + moneyParam("YTL",50) + "</br>");
+    document.write("50 USD : " + moneyParam("USD",50) + "</br>");
+    document.write("50 EUR : " + moneyParam("EUR",50) + "</br>");*/
+</script>
+    <table border="1">
+        <tr><td colspan="2" style="text-align: center;">Para Hesaplama</td></tr>
+        <tr>
+            <td><input type="text" name="" id="amount"></td>
+            <td>
+                <select name="type" id="selType">
+                    <option value="YTL">YTL</option>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan='2' style='text-align: center;'>
+                <a style='color: Red; font-weight:bold; font-size:1.25rem;' id="lastCalc"></a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="button" value="Hesapla" onclick="moneyParam(document.getElementById('selType').value ,document.getElementById('amount').value)">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

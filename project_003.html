@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="govde" bgcolor="black">
+    <h2 id="paragraf"> New App</h2>
+    <input type="button" value="Click ME!" id="tus0" onclick="openLight()">
+    <input type="button" value="Click ME!" id="tus1" onclick="change()">
+    <input type="button" value="Click ME!" id="tus2" onclick="change2()">
+<script>
+    var body = document.getElementById('govde');
+    var paragraf = document.getElementById('paragraf');
+    var tus2 = document.getElementById('tus2');
+    function openLight(){
+        body.style.backgroundColor = "#fff";
+    }
+    function change() {
+        paragraf.style.color = "gray";
+    }
+    function change2() {
+        tus2.value = "Congrulatations!";
+    }
+
+    
+</script>
+</body>
+</html>

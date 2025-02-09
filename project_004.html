@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function With Params</title>
+</head>
+<body>
+<script>
+    function moneyParam(type, amount) {
+        
+        if (type == "YTL") {
+            var rate = 1;
+        }
+        if (type == "USD") {
+            var rate = 35;
+        }
+        if (type == "EUR") {
+            var rate = 36;
+        }
+        var calc = amount*rate;
+        return calc;
+    }
+    document.write("50 YTL : " + moneyParam("YTL",50) + "</br>");
+    document.write("50 USD : " + moneyParam("USD",50) + "</br>");
+    document.write("50 EUR : " + moneyParam("EUR",50) + "</br>");
+</script>
+    
+</body>
+</html>

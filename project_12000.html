@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zar Atmaca</title>
+    <style>
+        div.zar{
+            float: left;
+            width: 32px;
+            background: #F5F5F5;
+            border: #999 1px solid;
+            padding: 10px;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+        }
+        #button{
+            border: #999 1px solid;
+            background: #F5F5F5;
+            padding: 10px;
+            margin: 5px;
+            width: 100px;
+        }
+    </style>
+    <script>
+        function getID(x){
+           return document.getElementById(x);
+        }
+        function ZarAt(){
+            var zar1 = document.getElementById("zar1");
+            var zar2 = document.getElementById("zar2");
+            var yazdir = document.getElementById("yazdir");
+            var d1 = Math.floor(Math.random() * 6) + 1;
+            var d2 = Math.floor(Math.random() * 6) + 1;
+            var zarToplam = d1 + d2;
+            zar1.innerHTML = d1;
+            zar2.innerHTML = d2;
+            yazdir.innerHTML = "Zarların Toplamı: " + zarToplam;
+            if (d1 == d2) {
+                yazdir.innerHTML += "<br><a style='color:lime'>Çift attın Tebrikler!</a>";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="zar1" class="zar">0</div>
+    <div id="zar2" class="zar">0</div><br><br><br><br>
+    <button id="button" onclick="ZarAt()" style="float: left;">ZarAt</button>
+    <h2 id="yazdir" style="clear:left"></h2>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Döngü Games</title>
+    <script>
+        var surekli_dizi = [1,2,3,4,5,6,7,8,9];
+        var colors =  ["lime","blue","green","purple","pink","black"];
+
+        var x, y = 0,z;
+        var toplam = 0;
+
+        for (let i = 0; i < surekli_dizi.length; i++){
+            toplam += surekli_dizi[i];
+        }
+        document.write("Sayıların toplamı: "+ toplam + "</br></br>");
+
+        while (y < 5){
+            document.writeln("<span style='color: red'>World Hello</span>");
+            y++;
+        }
+        document.write("<br>");
+
+        for (var q = 0;q <= 5;q++){
+            document.writeln("<span style='color: "+colors[q]+"'>World Hello</span>");
+        }
+        document.write("<br>");document.write("<br>");
+
+        for (var sayi = 52; sayi >= 0; sayi--) {
+            if ((sayi % 2) == 0) {
+                document.write("<a style='color:lime'>"+sayi+"</a><br>");
+            }
+            else{
+                document.write("<a style='color:red'>"+sayi+"</a><br>");
+            }
+        }
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

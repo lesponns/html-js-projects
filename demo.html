@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow Effect</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            margin: 50px auto;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+            transition: box-shadow 500ms ease; /* Parlama geçişi */
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+
+    <script>
+        let state = 1; // Değişken (1: Yeşil, 0: Kırmızı)
+
+        function glowEffect() {
+            const box = document.getElementById('box');
+            if (state === 1) {
+                // Yeşil parlama
+                box.style.boxShadow = '0 0 20px 10px rgba(0, 255, 0, 0.7)';
+            } else {
+                // Kırmızı parlama
+                box.style.boxShadow = '0 0 20px 10px rgba(255, 0, 0, 0.7)';
+            }
+
+            // Parlama söner
+            setTimeout(() => {
+                box.style.boxShadow = '0 0 0 rgba(0, 0, 0, 0)';
+            }, 500);
+        }
+
+        // Sayfa tamamen yüklendiğinde çalıştır
+        window.onload = function() {
+            glowEffect(); // İlk animasyonu tetikle
+            setTimeout(() => {
+                state = 0; // Durumu değiştir (Kırmızı yap)
+                glowEffect(); // İkinci animasyonu tetikle
+            }, 1000); // 1 saniye sonra tetiklenir
+        };
+    </script>
+</body>
+</html>

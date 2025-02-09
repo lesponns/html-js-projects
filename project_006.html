@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function in the function</title>
+</head>
+<body>
+
+<script>
+    function topla(tValue1, tValue2){
+        tLastValue = tValue1 + tValue2;
+        return tLastValue;
+        
+    }
+    function carp(cValue1,cValue2){
+        cLastValue = cValue1 * cValue2;
+        return cLastValue;
+    }
+    document.write(carp(topla(10,23),topla(2,37))+"</br>");
+    document.write(topla(carp(10,23),carp(2,37))+"</br>");
+</script>
+</body>
+</html>

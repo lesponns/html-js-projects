@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KDV Hesapla</title>
+</head>
+<body align="center">
+    <table border="1">
+        <tr>
+            <td colspan="2">KDV HESAPLAMA</td>
+        </tr>
+        <tr>
+            <td>Ürün Fiyatı: <input type="number" id="amount"></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+    <script>
+        function kdvHesap(tutar, yuzde){
+            var yenitutar = tutar+(tutar*yuzde/100);
+            document.write("KDVli yeni fiyat "+yenitutar);
+        }
+        kdvHesap(100,18);
+    </script>
+</body>
+</html>

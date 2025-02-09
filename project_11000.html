@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>body{background-color: black; color: lime;}</style>
+    <script type="text/javascript">
+        var sayilar = new Array("sıfır", "bir","iki","üç");
+        document.write(sayilar+"<br><br>");
+
+        var dizi = [32,"Emirhan",123,"Mustafa","Mücahit",2.458];
+        document.write(dizi+"<br>");
+        document.write(dizi[0] + "<br>");
+        document.write(dizi[1] + "<br>");
+        document.write(dizi[2] + "<br>");
+        document.write(dizi[3] + "<br>");
+        document.write(dizi[4] + "<br>");
+        document.write(dizi[5] + "<br>");
+        document.write("Adet: " + dizi.length + "<br>");
+
+        var tarih = ["27","11","2024"];
+        var kesme = tarih.join("/");
+
+        document.write("<br>" + kesme + "<br>");
+
+        var sayilar1 = [2,4,6,7,9,10];
+        sayilar1.unshift("eksibir", "sıfır", "bir");
+        document.write("<br>" + sayilar1 + "<br>");
+
+        var toplam = tarih.concat(sayilar1);
+        document.write("<br>" + toplam + "<br>");
+
+        sayilar1.pop();
+        document.write("<br>" + sayilar1 + "<br>");
+
+        sayilar1.push(23);
+        document.write("<br>" + sayilar1 + "<br>");
+
+        sayilar1.sort();
+        document.write("<br>" + sayilar1 + "<br>");
+
+        var sayilar2 = [2,4,8,32,16,64,128,256];
+        sayilar2.sort();
+        document.write("<br>" + sayilar2 + "<br>");
+
+        sayilar2.reverse();
+        document.write("<br>" + sayilar2 + "<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

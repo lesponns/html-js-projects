@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function rastgelesayi(say1, say2){
+            var number = Math.floor(Math.random() * (say2 - say1) + say1);
+            return number;
+        }
+        var sayilar1 = new Array(10);
+        var bolensay = new Array(10);
+        
+
+        for(var i = 0;i < sayilar1.length; i++){
+            sayilar1[i] = rastgelesayi(10,50);
+        }
+        for(var i = 0; i < bolensay.length; i++){
+            var indis = 0;
+            for (var a = 2; a < 50; a++){
+                if(sayilar1[i] % a == 0){
+                    indis++;
+                }
+            }
+        document.write("<"+sayilar1[i]+"> Bölen Sayısı: <"+indis+"><br>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

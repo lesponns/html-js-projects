@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesap Makinesi</title>
+</head>
+<body>
+    <h1>Javascript Dört İşlem</h1>
+    <table>
+        <tr>
+            <td>1. Sayı: <input type="text" id="inputOne" autocomplete="off"></td>
+        </tr>
+        <tr>
+            <td>2. Sayı: <input type="text" id="inputTwo" autocomplete="off"></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="radio" name="operation" id="topla" checked>Topla
+                <input type="radio" name="operation" id="cıkar">Çıkar
+                <input type="radio" name="operation" id="carp">Çarp
+                <input type="radio" name="operation" id="bol">Böl
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <span id="sonuc">İşlem Sonucu: </span>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <input type="button" value="Hesapla" onclick="calc()">
+            </td>
+        </tr>
+    </table>
+    <script>
+        function getID(id) {
+            return document.getElementById(id);
+        }
+
+        function calc() {
+            var valueOne = parseFloat(getID("inputOne").value);
+            var valueTwo = parseFloat(getID("inputTwo").value);
+            var lastValue = 0;
+
+            var topla = getID("topla");
+            var cıkar = getID("cıkar");
+            var carp = getID("carp");
+            var bol = getID("bol");
+
+            if (topla.checked) {
+                lastValue = valueOne + valueTwo;
+            } else if (cıkar.checked) {
+                lastValue = valueOne - valueTwo;
+            } else if (carp.checked) {
+                lastValue = valueOne * valueTwo;
+            } else if (bol.checked) {
+                if (valueTwo !== 0) {
+                    lastValue = valueOne / valueTwo;
+                } else {
+                    lastValue = "Hata: Sıfıra bölünemez!";
+                }
+            }
+
+            document.getElementById("sonuc").innerHTML = "İşlem Sonucu: "+lastValue;
+        }
+    </script>
+</body>
+</html>

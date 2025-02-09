@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Kare kenarını prompt ile alma ve çevre uzunluğu ile alanı hesaplama
+        let kenar = parseInt(prompt("Kare kenarını giriniz:"));
+        let cevre = 4 * kenar;
+        let alan = kenar * kenar;
+        document.write("Kare kenarı: " + kenar + "m<br>"+"Kare çevresi: " + cevre + "m<br>"+"Kare alanı: " + alan + "m²<br>");
+
+        ///////////////////////////////////////////////////////////////////////
+        document.write("<br><br>");
+        
+        let yariCap = parseInt(prompt("Dairenin yarı çapını giriniz:"));
+        let daireCevresi = 2 * Math.PI * yariCap;
+        let daireAlani = Math.PI * (yariCap * yariCap);
+        document.write("Daire yarı çapı: " + yariCap + "m<br>"+"Daire çevresi: " + daireCevresi.toFixed(2) + "m<br>"+"Daire alanı: " + daireAlani.toFixed(2) + "m²<br>");
+
+        document.write("<br><br>");
+        // Dikdörtgenin uzunluk ve genişliğini prompt ile alma ve çevre uzunluğu
+        let uzunluk = parseInt(prompt("Dikdörtgenin uzunluğunu giriniz:"));
+        let genislik = parseInt(prompt("Dikdörtgenin genişliğini giriniz:"));
+        let dikdortgenCevresi = 2 * (uzunluk + genislik);
+        let dikdortgenAlani = uzunluk * genislik;
+        document.write("Dikdörtgen uzunluğu: " + uzunluk + "m<br>"+"Dikdörtgen genişliği: " + genislik + "m<br>"+"Dikdörtgen çevresi: " + dikdortgenCevresi + "m<br>"+"Dikdörtgen alanı: " + dikdortgenAlani + "m²<br>");
+
+
+</script>
+</head>
+<body>    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .panel{
+            width: 350px;
+            margin: auto;
+        }
+
+        .panel a{
+            width: auto;
+            height: 30px;
+            margin:3px 0;
+            background: lightgray;
+            border: solid 1px #ccc;
+            text-align: center;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function() {
+            var date = new Date();
+            document.getElementById("date").innerHTML = date.toString();
+            
+            // Tarih bileşenlerini ayırma
+            document.getElementById("year").innerHTML = date.getFullYear();
+            document.getElementById("month").innerHTML = date.getMonth() + 1; // Aylar 0'dan başlar
+            document.getElementById("day").innerHTML = date.getDate();
+
+            document.getElementById("hour").innerHTML = date.getHours();
+            document.getElementById("minute").innerHTML = date.getMinutes();
+            document.getElementById("seconds").innerHTML = date.getSeconds();
+            setInterval(updateClock, 1000);
+            
+        };
+    </script>
+</head>
+<body>
+    <div class="panel"><a id="date" placeholder="Tarih"></a></div>
+    <div class="panel"><a id="year" placeholder="Yıl"></a></div>
+    <div class="panel"><a id="month" placeholder="Ay"></a></div>
+    <div class="panel"><a id="day" placeholder="Gün"></a></div>
+    <div class="panel"><a id="hour" placeholder="Saat"></a></div>
+    <div class="panel"><a id="minute" placeholder="Dakika"></a></div>
+    <div class="panel"><a id="seconds" placeholder="Saniye"></a></div>
+</body>
+</html>
